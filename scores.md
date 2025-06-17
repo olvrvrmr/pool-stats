@@ -12,7 +12,7 @@
 | Dave A  | 2  | 0 | 2 | 0%   |
 | Robin   | 2  | 0 | 2 | 0%   |
 
-## 🧾 Guest Players
+## 🧾 Guest Player
 
 | Player | MP | W | L | %    |
 |--------|----|---|---|------|
