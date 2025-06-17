@@ -9,15 +9,42 @@
 <body>
   <div class="container">
     <h1>🏆 Team Scoreboard</h1>
-    <div id="content">Loading scores...</div>
+    <p id="last-updated" class="timestamp">Last updated: loading...</p>
+
+    <div class="tabs">
+      <button onclick="showSection('singles')">🏓 Singles</button>
+      <button onclick="showSection('doubles')">🎾 Doubles</button>
+    </div>
+
+    <div id="content">
+      <div id="singles" class="section"></div>
+      <div id="doubles" class="section" style="display:none;"></div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>    fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/scores.md')
-      .then(response => response.text())
-      .then(text => {
-        document.getElementById('content').innerHTML = marked.parse(text);
-      });
+  <script>
+    async function loadScores() {
+      const res = await fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/scores.md');
+      const text = await res.text();
+      const parts = text.split(/---+/g);
+
+      const singlesHTML = marked.parse(parts[0]);
+      const doublesHTML = marked.parse(parts[1]);
+
+      document.getElementById('singles').innerHTML = singlesHTML;
+      document.getElementById('doubles').innerHTML = doublesHTML;
+
+      const now = new Date().toLocaleString();
+      document.getElementById('last-updated').textContent = 'Last updated: ' + now;
+    }
+
+    function showSection(section) {
+      document.getElementById('singles').style.display = section === 'singles' ? 'block' : 'none';
+      document.getElementById('doubles').style.display = section === 'doubles' ? 'block' : 'none';
+    }
+
+    loadScores();
   </script>
 </body>
 </html>
