@@ -28,7 +28,7 @@
     try {
       const res = await fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/scores.md');
       const text = await res.text();
-      const parts = text.split(/---+/g);
+      const parts = text.split('<!-- SPLIT -->');
 
       if (parts.length < 2) {
         document.getElementById('content').innerHTML = "⚠️ Markdown not split properly with `---`.";
