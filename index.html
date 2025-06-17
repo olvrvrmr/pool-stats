@@ -13,8 +13,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    fetch('scores.md')
+  <script>    fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/scores.md')
       .then(response => response.text())
       .then(text => {
         document.getElementById('content').innerHTML = marked.parse(text);
