@@ -24,27 +24,34 @@
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    async function loadScores() {
+  async function loadScores() {
+    try {
       const res = await fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/scores.md');
       const text = await res.text();
       const parts = text.split(/---+/g);
 
-      const singlesHTML = marked.parse(parts[0]);
-      const doublesHTML = marked.parse(parts[1]);
+      if (parts.length < 2) {
+        document.getElementById('content').innerHTML = "⚠️ Markdown not split properly with `---`.";
+        return;
+      }
 
-      document.getElementById('singles').innerHTML = singlesHTML;
-      document.getElementById('doubles').innerHTML = doublesHTML;
+      document.getElementById('singles').innerHTML = marked.parse(parts[0]);
+      document.getElementById('doubles').innerHTML = marked.parse(parts[1]);
 
       const now = new Date().toLocaleString();
       document.getElementById('last-updated').textContent = 'Last updated: ' + now;
+    } catch (err) {
+      document.getElementById('content').innerHTML = "⚠️ Failed to load scores.md";
+      console.error(err);
     }
+  }
 
-    function showSection(section) {
-      document.getElementById('singles').style.display = section === 'singles' ? 'block' : 'none';
-      document.getElementById('doubles').style.display = section === 'doubles' ? 'block' : 'none';
-    }
+  function showSection(section) {
+    document.getElementById('singles').style.display = section === 'singles' ? 'block' : 'none';
+    document.getElementById('doubles').style.display = section === 'doubles' ? 'block' : 'none';
+  }
 
-    loadScores();
-  </script>
+  loadScores();
+</script>
 </body>
 </html>
