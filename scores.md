@@ -19,7 +19,7 @@
 | Ivan   | 1  | 1 | 0 | 100% |
 | Rich   | 1  | 1 | 0 | 100% |
 
----
+<!-- SPLIT -->
 
 # 🎾 Doubles Standings
 
