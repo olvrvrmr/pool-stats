@@ -8,8 +8,8 @@
 | Gary    | 7  | 4 | 3 | 57.1%  | 💪     |
 | Roy     | 8  | 4 | 4 | 50%    | 💪     |
 | Dave E  | 4  | 2 | 2 | 50%    |        |
-| Graham  | 8  | 3 | 5 | 37.5%  | 🫣     |
-| Dave A  | 3  | 0 | 3 | 0%     | 🤡     |
+| Graham  | 8  | 3 | 5 | 37.5%  | 🫣🤡    |
+| Dave A  | 3  | 0 | 3 | 0%     |        |
 | Robin   | 2  | 0 | 2 | 0%     |        |
 
 ## 🧾 Guest Players
@@ -24,10 +24,10 @@
 
 | Badge | Meaning |
 |--------|---------|
-| 💪 | Most wins (raw total) |
-| 🏆 | Highest win % (min 3 matches) |
-| 🤡 | Lowest win % (min 3 matches) |
-| 🫣 | Most losses |
+| 💪 | Most wins (min 5 matches) |
+| 🏆 | Highest win % (min 5 matches) |
+| 🤡 | Lowest win % (min 5 matches) |
+| 🫣 | Most losses (min 5 matches) |
 
 <!-- SPLIT -->
 
@@ -39,7 +39,7 @@
 | Robin   | 2  | 2 | 0 | 100%   |        |
 | Roy     | 6  | 4 | 2 | 66.7%  | 🏆     |
 | Gary    | 6  | 4 | 2 | 66.7%  | 🏆     |
-| Dave E  | 3  | 2 | 1 | 66.7%  | 🏆     |
+| Dave E  | 3  | 2 | 1 | 66.7%  |        |
 | Mikey   | 8  | 5 | 3 | 62.5%  | 💪🫣   |
 | Graham  | 8  | 5 | 3 | 62.5%  | 💪🫣   |
 | Olly    | 7  | 4 | 3 | 57.1%  | 🤡🫣   |
@@ -57,7 +57,7 @@
 
 | Badge | Meaning |
 |--------|---------|
-| 💪 | Most wins (raw total) |
-| 🏆 | Highest win % (min 3 matches) |
-| 🤡 | Lowest win % (min 3 matches) |
-| 🫣 | Most losses |
+| 💪 | Most wins (min 5 matches) |
+| 🏆 | Highest win % (min 5 matches) |
+| 🤡 | Lowest win % (min 5 matches) |
+| 🫣 | Most losses (min 5 matches) |
