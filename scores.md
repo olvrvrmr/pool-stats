@@ -1,4 +1,4 @@
-# 🏓 Singles Standings
+# 🏓 Singles Stats
 
 | Player  | MP | W | L | %      |
 |---------|----|---|---|--------|
@@ -22,7 +22,7 @@
 
 <!-- SPLIT -->
 
-# 🎾 Doubles Standings
+# 🎾 Doubles Stats
 
 | Player  | MP | W | L | %      |
 |---------|----|---|---|--------|
