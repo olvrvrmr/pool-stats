@@ -12,7 +12,7 @@
 - Tipsy Cow Long Horns vs Maschi's Bar  
 - Thistle & Rose Red vs Tipsy Cow Short Horns  
 - Bar Rambla Red vs Free Week  
-- Firestation Blue Watch vs CC's  
+- Firestation Blue Watch vs CC's
 
 ## Week 3 – May 27th
 - Tipsy Cow Short Horns vs Bar Rambla Red  
