@@ -1,7 +1,7 @@
 # 🗓️ Wee Rock Café Summer Pool League – Fixtures (Blue Division)
 
 ## Week 1 – May 13th
-- Border Bar vs Tipsy Cow Long Horns  
+- Border Bar vs Tipsy Cow Long Horns  | 
 - Thistle & Rose Blue vs Firestation Blue Watch  
 - CC's vs Bar Rambla Red  
 - Free Week  
@@ -58,7 +58,7 @@
 
 ## Week 9 – July 8th
 - Bar Rambla Red vs Thistle & Rose Blue  
-- Firestation Blue Watch vs Border Bar  
+- Firestation Blue Watch vs Border Bar  | 3-6 | Points: 3-8
 - Tipsy Cow Short Horns vs Tipsy Cow Long Horns  
 - Maschi's Bar vs Free Week  
 - Thistle & Rose Red vs CC's  

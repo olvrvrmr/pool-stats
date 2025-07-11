@@ -1,0 +1,33 @@
+name: Update Standings
+
+on:
+  push:
+    paths:
+      - 'fixtures.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run parser script
+      run: npx ts-node scripts/parse-fixtures.ts
+
+    - name: Commit updated standings
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@users.noreply.github.com'
+        git add standings.md
+        git commit -m 'chore: update standings after fixture change' || echo "No changes to commit"
+        git push
