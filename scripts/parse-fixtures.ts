@@ -33,10 +33,17 @@ function parseFixtures(markdown: string) {
   const lines = markdown.split('\n').filter(l => l.includes('|'));
 
   lines.forEach(line => {
+    // Skip Free Week lines
+    if (line.toLowerCase().includes('free week')) return;
+
     const match = line.match(/(.+?) vs (.+?)\s*\|\s*(\d+)[–-](\d+)\s*\|\s*Points:\s*(\d+)[–-](\d+)/);
     if (!match) return;
 
-    const [, teamA, teamB, rawA, rawB, ptsA, ptsB] = match;
+    // Clean up team names (remove leading dashes/whitespace)
+    let [, teamA, teamB, rawA, rawB, ptsA, ptsB] = match;
+    teamA = teamA.trim().replace(/^[-–—]\s*/, '');
+    teamB = teamB.trim().replace(/^[-–—]\s*/, '');
+
     const scoreA = parseInt(rawA);
     const scoreB = parseInt(rawB);
     const pointsA = parseInt(ptsA);
@@ -65,7 +72,12 @@ function parseFixtures(markdown: string) {
 }
 
 function generateStandings(): string {
-  const sorted = Object.entries(teamStats).sort((a, b) => b[1].points - a[1].points);
+  const sorted = Object.entries(teamStats).sort((a, b) => {
+  if (b[1].points === a[1].points) {
+    return a[0].localeCompare(b[0]); // Alphabetical tiebreaker
+  }
+  return b[1].points - a[1].points;
+});
 
   const header = '| Team | P | W | L | Points | Frames Won | Frames Lost |\n|------|---|---|---|--------|------------|-------------|';
   const rows = sorted.map(([team, stats]) =>

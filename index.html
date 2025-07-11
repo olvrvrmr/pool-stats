@@ -12,13 +12,15 @@
     <p id="last-updated" class="timestamp">Last updated: loading...</p>
 
     <div class="tabs">
-      <button onclick="showSection('singles')">🏓 Singles</button>
-      <button onclick="showSection('doubles')">🎾 Doubles</button>
+      <button id="btn-singles" onclick="showSection('singles')">🏓 Singles</button>
+      <button id="btn-doubles" onclick="showSection('doubles')">🎾 Doubles</button>
+      <button id="btn-standings" onclick="showSection('standings')">📊 Standings</button>
     </div>
 
     <div id="content">
       <div id="singles" class="section"></div>
-      <div id="doubles" class="section" style="display:none;"></div>
+      <div id="doubles" class="section"></div>
+      <div id="standings" class="section"></div>
     </div>
   </div>
 
@@ -28,30 +30,44 @@
     try {
       const res = await fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/scores.md');
       const text = await res.text();
-      const parts = text.split('<!-- SPLIT -->');
+      const parts = text.split(/<!--\s*SPLIT\s*-->/i);
 
       if (parts.length < 2) {
-        document.getElementById('content').innerHTML = "⚠️ Markdown not split properly with `---`.";
+        document.getElementById('content').innerHTML = "⚠️ Markdown not split properly with `<!-- SPLIT -->`.";
         return;
       }
 
       document.getElementById('singles').innerHTML = marked.parse(parts[0]);
       document.getElementById('doubles').innerHTML = marked.parse(parts[1]);
 
+      const standingsRes = await fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/standings.md');
+      const standingsText = await standingsRes.text();
+      document.getElementById('standings').innerHTML = marked.parse(standingsText);
+
       const now = new Date().toLocaleString();
       document.getElementById('last-updated').textContent = 'Last updated: ' + now;
     } catch (err) {
-      document.getElementById('content').innerHTML = "⚠️ Failed to load scores.md";
+      document.getElementById('content').innerHTML = "⚠️ Failed to load markdown content.";
       console.error(err);
     }
   }
 
   function showSection(section) {
-    document.getElementById('singles').style.display = section === 'singles' ? 'block' : 'none';
-    document.getElementById('doubles').style.display = section === 'doubles' ? 'block' : 'none';
+    const sections = ['singles', 'doubles', 'standings'];
+    const buttons = {
+      singles: document.getElementById('btn-singles'),
+      doubles: document.getElementById('btn-doubles'),
+      standings: document.getElementById('btn-standings')
+    };
+
+    sections.forEach(id => {
+      document.getElementById(id).style.display = id === section ? 'block' : 'none';
+      buttons[id].classList.toggle('active', id === section);
+    });
   }
 
   loadScores();
-</script>
+  showSection('singles');
+  </script>
 </body>
 </html>
