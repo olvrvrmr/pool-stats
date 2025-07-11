@@ -57,11 +57,11 @@
 - CC's vs Maschi's Bar  
 
 ## Week 9 – July 8th
-- Bar Rambla Red vs Thistle & Rose Blue  
-- Firestation Blue Watch vs Border Bar  | 3-6 | Points: 3-8
-- Tipsy Cow Short Horns vs Tipsy Cow Long Horns  
-- Maschi's Bar vs Free Week  
-- Thistle & Rose Red vs CC's  
+- Bar Rambla Red vs Thistle & Rose Blue | 5-0 | Points: 7-0
+- Firestation Blue Watch vs Border Bar | 3-6 | Points: 3-8
+- Tipsy Cow Short Horns vs Tipsy Cow Long Horns | 5-4 | Points: 7-4
+- Maschi's Bar vs Free Week | 0-0 | Points: 0-0
+- Thistle & Rose Red vs CC's | 4-5 | Points: 4-7
 
 ## Week 10 – July 15th
 - Tipsy Cow Long Horns vs Border Bar  
