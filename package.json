@@ -1,7 +1,7 @@
 {
   "name": "pool-stats",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "update:standings": "ts-node scripts/parse-fixtures.ts"
   },
