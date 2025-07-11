@@ -1,6 +1,6 @@
 // scripts/parse-fixtures.ts
-import * as fs from 'fs';
-import * as path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 interface TeamStats {
   played: number;

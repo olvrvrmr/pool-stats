@@ -60,7 +60,7 @@
 - Bar Rambla Red vs Thistle & Rose Blue | 5-0 | Points: 7-0
 - Firestation Blue Watch vs Border Bar | 3-6 | Points: 3-8
 - Tipsy Cow Short Horns vs Tipsy Cow Long Horns | 5-4 | Points: 7-4
-- Maschi's Bar vs Free Week | 0-0 | Points: 0-0
+- Maschi's Bar vs Free Week 
 - Thistle & Rose Red vs CC's | 4-5 | Points: 4-7
 
 ## Week 10 – July 15th
