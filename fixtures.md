@@ -18,7 +18,7 @@
 - Tipsy Cow Short Horns vs Bar Rambla Red  
 - Maschi's Bar vs Thistle & Rose Red  
 - Thistle & Rose Blue vs Tipsy Cow Long Horns  
-- CC's vs Border Bar  
+- CC's vs Border Bar | 4-5 | Points: 4-7
 - Free Week vs Firestation Blue Watch  
 
 ## Week 4 – June 3rd
@@ -30,7 +30,7 @@
 
 ## Week 5 – June 10th
 - Free Week vs Thistle & Rose Blue  
-- Tipsy Cow Short Horns vs Border Bar  
+- Tipsy Cow Short Horns vs Border Bar | 4-5 | Points: 4-7
 - Maschi's Bar vs Firestation Blue Watch  
 - Thistle & Rose Red vs Bar Rambla Red  
 - CC's vs Tipsy Cow Long Horns  
@@ -38,7 +38,7 @@
 ## Week 6 – June 17th
 - Tipsy Cow Long Horns vs Bar Rambla Red  
 - Firestation Blue Watch vs Thistle & Rose Red  
-- Border Bar vs Maschi's Bar  
+- Border Bar vs Maschi's Bar | 4-5 | Points: 4-7
 - Thistle & Rose Blue vs Tipsy Cow Short Horns  
 - CC's vs Free Week  
 
@@ -46,13 +46,13 @@
 - Free Week vs Tipsy Cow Long Horns  
 - Tipsy Cow Short Horns vs CC's  
 - Maschi's Bar vs Thistle & Rose Blue  
-- Thistle & Rose Red vs Border Bar  
+- Thistle & Rose Red vs Border Bar | 2-7 | Points: 2-9
 - Bar Rambla Red vs Firestation Blue Watch  
 
 ## Week 8 – July 1st
 - Free Week vs Tipsy Cow Short Horns  
 - Tipsy Cow Long Horns vs Firestation Blue Watch  
-- Border Bar vs Bar Rambla Red  
+- Border Bar vs Bar Rambla Red 
 - Thistle & Rose Blue vs Thistle & Rose Red  
 - CC's vs Maschi's Bar  
 
