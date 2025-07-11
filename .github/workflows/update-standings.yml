@@ -20,6 +20,9 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+    
+    - name: Debug - Show script content
+      run: cat scripts/parse-fixtures.ts
 
     - name: Run parser script
       run: npx ts-node scripts/parse-fixtures.ts
