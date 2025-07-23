@@ -14,13 +14,11 @@
     <div class="tabs">
       <button id="btn-singles" onclick="showSection('singles')">🏓 Singles</button>
       <button id="btn-doubles" onclick="showSection('doubles')">🎾 Doubles</button>
-      <button id="btn-standings" onclick="showSection('standings')">📊 Standings</button>
     </div>
 
     <div id="content">
       <div id="singles" class="section"></div>
       <div id="doubles" class="section"></div>
-      <div id="standings" class="section"></div>
     </div>
   </div>
 
@@ -40,10 +38,6 @@
       document.getElementById('singles').innerHTML = marked.parse(parts[0]);
       document.getElementById('doubles').innerHTML = marked.parse(parts[1]);
 
-      const standingsRes = await fetch('https://raw.githubusercontent.com/olvrvrmr/pool-stats/main/standings.md');
-      const standingsText = await standingsRes.text();
-      document.getElementById('standings').innerHTML = marked.parse(standingsText);
-
       const now = new Date().toLocaleString();
       document.getElementById('last-updated').textContent = 'Last updated: ' + now;
     } catch (err) {
@@ -53,11 +47,10 @@
   }
 
   function showSection(section) {
-    const sections = ['singles', 'doubles', 'standings'];
+    const sections = ['singles', 'doubles'];
     const buttons = {
       singles: document.getElementById('btn-singles'),
-      doubles: document.getElementById('btn-doubles'),
-      standings: document.getElementById('btn-standings')
+      doubles: document.getElementById('btn-doubles')
     };
 
     sections.forEach(id => {
